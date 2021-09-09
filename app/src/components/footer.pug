@@ -1,0 +1,33 @@
+mixin footer()
+  .footer 
+    .footer__body.container
+      .footer__top
+        a(href="index.html").footer__logo LOGO
+        ul.footer__list 
+          li.footer__li 
+            a(href="#!").footer__link Главная
+          li.footer__li 
+            a(href="#!").footer__link Виды спорта
+          li.footer__li 
+            a(href="#!").footer__link Статистика
+          li.footer__li 
+            a(href="#!").footer__link Результаты
+          li.footer__li 
+            a(href="#!").footer__link О нас
+        ul.footer__icons 
+          li.footer__icons-li
+            a(href="https://instagram.com" target="_blank").footer__icons-link <img src="images/instagram.svg">
+          li.footer__icons-li
+            a(href="https://t.me" target="_blank").footer__icons-link <img src="images/telegram.svg">
+          li.footer__icons-li
+            a(href="https://youtube.com" target="_blank").footer__icons-link <img src="images/youtube.svg">
+      .header__lang.footer__lang
+        button(onclick="addActiveDrop(this)").header__lang-btn.footer__lang-btn Ru <img src="images/polygon.svg">
+        .header__lang-list.footer__lang-list
+          button.header__lang-item Eng
+          button.header__lang-item Ua
+          button.header__lang-item Fr
+      .footer__bottom
+        img(src="images/visa.svg", alt="visa").footer__img
+        img(src="images/mastercard.svg", alt="mastercard").footer__img
+        img(src="images/liqpay.svg", alt="liqpay").footer__img

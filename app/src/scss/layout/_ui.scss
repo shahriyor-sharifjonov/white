@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  &:focus,
+  &:active{
+    outline: none;
+  }
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+}
+html{
+  height: 100%;
+}
+a{
+  text-decoration: none;
+}
+button.btn{
+  background: linear-gradient(270deg, #DA3B45 0%, #F17833 100%);
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  font-family: inherit;
+  cursor: pointer;
+  color: #FFFFFF;
+  border: none;
+}
+.display-none{
+  display: none;
+}
+ul{
+  list-style: none;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+.main{
+  flex: 1 1 auto;
+}
