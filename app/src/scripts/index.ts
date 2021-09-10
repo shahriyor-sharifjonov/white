@@ -150,3 +150,15 @@ window.onload = checkWindow
 window.addEventListener('resize', function(){
   checkWindow()
 })
+
+if(document.getElementsByClassName('sports__top-item')){
+  let sportsItem = document.getElementsByClassName('sports__top-item');
+  window.addEventListener('click', function(e){
+    if(e.target.classList.contains('sports__top-item')){
+      for(let i = 0; i < sportsItem.length; i++){
+        sportsItem[i].classList.remove('active');
+      }
+      e.target.classList.add('active');
+    }
+  }) 
+}

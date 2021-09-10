@@ -1,0 +1,262 @@
+.sports{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @include media($md){
+    margin-top: 30px;
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media($md){
+      flex-wrap: wrap;
+    }
+    &-item{
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 50px;
+      padding-right: 50px;
+      @include media($md){
+        width: 50%;
+      }
+      &:nth-child(1),&:nth-child(2){
+        @include media($md){
+          padding-top: 20px;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid #303030;
+        }
+      }
+      &:nth-child(1),&:nth-child(3){
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 80px;
+          background: #303030;
+        }
+      }
+      &:not(:last-child){
+        border-right: 1px solid #303030;
+        @include media($md){
+          border-right: none;
+        }
+      }
+      &.active{
+        p{
+          position: relative;
+          padding-left: 5px;
+          margin-right: -5px;
+          transition: 200ms ease;
+          &::before{
+            content: '';
+            position: absolute;
+            left: -5px;
+            width: 4px;
+            bottom: 0;
+            height: 100%;
+            background: linear-gradient(270deg, #DA3B45 0%, #F17833 100%);
+            transition: 200ms ease;
+            animation: toTop .2s 1 ease;
+          }
+        }
+      }
+      p{
+        color: #303030;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        margin-top: 10px;
+        pointer-events: none;
+      }
+      img{
+        pointer-events: none;
+      }
+    }
+  }
+  &__content{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 37px;
+    padding-bottom: 30px;
+    @include media(1200){
+      box-shadow: none;
+    }
+  }
+  &__title{
+    font-family: 'Avenir Next Cyr';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #303030;
+    margin-top: 50px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    @include media(1200){
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      width: calc(100% - 20px);
+      height: 1px;
+      background: #BDBDBD;
+      top: 0;
+      left: 10px;
+    }
+  }
+  &__col{
+    width: calc(16.666% - 12.5px);
+    @include media(1200){
+      width: 100%;
+    }
+  }
+  &__name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 12.5px;
+    @include media(1200){
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      position: relative;
+      padding-right: 0;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 1px;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        background: #BDBDBD;
+      }
+    }
+  }
+  &__desc{
+    font-family: 'Avenir Next Cyr';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #080C53;
+    &:first-child{
+      margin-bottom: 10px;
+    }
+  }
+  &__item{
+    background: #EAECEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+    height: 100%;
+    @include media(1200){
+      min-height: 44px;
+      margin-bottom: 15px;
+    }
+    &-with-btn{
+      padding-left: 12.5px;
+      border-left: 1px solid #BDBDBD;
+      @include media(1200){
+        padding-left: 0;
+        padding-top: 15px;
+        border-top: 1px solid #BDBDBD;
+        border-left: none;
+      }
+    }
+    &-title{
+      font-family: 'Avenir Next Cyr';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      color: #080C53;
+      margin-bottom: 5px;
+    }
+    &-p{
+      font-family: 'Avenir Next Cyr';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      color: #080C53;
+    }
+    &-btn{
+      height: 100%;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFFFFF;
+      transition: 200ms ease;
+      @media (hover: hover){
+        &:hover{
+          box-shadow: 0px 10px 35px 0px #FFC84766;
+        }
+      }
+      @include media(1200){
+        height: 44px;
+        margin-bottom: 5px;
+      }
+    }
+    &-fav{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+    }
+  }
+}
+
+
+@keyframes toTop {
+  from{
+    height: 0;
+  }
+  to{
+    height: 100%;
+  }
+} 
