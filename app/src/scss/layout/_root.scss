@@ -23,6 +23,12 @@ $sizes: (1320:$xxl,
   }
 }
 
+@mixin media($size) {
+  @media (max-width:#{$size}px) {
+    @content;
+  }
+}
+
 @each $container-size,
 $break-point in $sizes {
   @if $container-size==0 {
@@ -70,12 +76,22 @@ $break-point in $sizes {
       .container {
         max-width: #{$container-size}px;
       }
+
+      .container-sm{
+        max-width: #{$container-size / 2}px;
+        width: 100%;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        @include media(1400){
+          max-width: #{$container-size}px;
+        }
+      }
     }
   }
 }
 
-@mixin media($size) {
-  @media (max-width:#{$size}px) {
-    @content
-  }
-}
+
+
+
+

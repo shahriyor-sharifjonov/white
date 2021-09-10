@@ -18,7 +18,7 @@ html{
 a{
   text-decoration: none;
 }
-button.btn{
+.btn{
   background: linear-gradient(270deg, #DA3B45 0%, #F17833 100%);
   font-style: normal;
   font-weight: 600;
@@ -46,4 +46,5 @@ ul{
 }
 .main{
   flex: 1 1 auto;
+  margin-top: 50px;
 }

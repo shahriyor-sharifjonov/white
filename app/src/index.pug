@@ -11,7 +11,11 @@ html(lang="en")
       include components/header.pug 
       +header
       main.main 
+        include components/carousel.pug 
+        +carousel
       include components/footer.pug 
       +footer
 
+    script(src="scripts/jquery.js") 
+    script(src="scripts/slick.min.js") 
     script(src="scripts/index.js") 
