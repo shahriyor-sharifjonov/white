@@ -88,5 +88,9 @@
     font-size: 14px;
     line-height: 17px;
     color: #FFFFFF;
+    margin-bottom: 50px;
+    @include media($sm){
+      width: 100%;
+    }
   }
 }
