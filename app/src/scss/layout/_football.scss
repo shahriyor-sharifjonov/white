@@ -10,6 +10,19 @@
       left: 0;
       width: 100%;
     }
+    &_2{
+      align-items: center;
+      padding-top: 50px;
+      margin-bottom: 100px;
+      @include media(1200){
+        flex-direction: row;
+        justify-content: center;
+      }
+      @include media($md){
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
   }
   &__col{
     &:not(:last-child){
@@ -91,6 +104,230 @@
     margin-bottom: 50px;
     @include media($sm){
       width: 100%;
+    }
+  }
+  &__name{
+    font-family: 'Avenir Next Cyr';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #303030;
+    @include media($sm){
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &__start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+    @include media($md){
+      margin: 15px 0;
+    }
+    &-date{
+      font-family: 'Avenir Next Cyr';
+      font-style: normal;
+      font-weight: 450;
+      font-size: 20px;
+      line-height: 25px;
+      color: #080C53;
+      margin-bottom: 10px;
+    }
+    &-time{
+      font-family: 'Avenir Next Cyr';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 44px;
+      color: #080C53;
+    }
+  }
+  &__subtitle{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #303030;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media($md){
+      flex-direction: column;
+    }
+  }
+  &__btn_longer{
+    max-width: 392px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-of-type{
+      margin-right: 50px;
+      @include media($md){
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__btn_with-i{
+    border: 2px solid;
+    border-image-source: linear-gradient(270deg, #DA3B45 0%, #F17833 100%);
+    border-image-slice: 1;
+    background: none;
+    color: #DA3B45;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    @include media($sm){
+      font-size: 14px;
+      line-height: 17px;
+    }
+    img{
+      margin-right: 10px;
+    }
+  }
+  &__p_light{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #828282;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    @include media($sm){
+      font-size: 12px;
+      line-height: 150%;
+      max-width: 225px;
+      margin: 20px auto 150px auto;
+    }
+  }
+  &__forecast{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    &-col{
+      width: calc(33.333% - 20px);
+      @include media($sm){
+        width: calc(33.333% - 8px);
+      }
+    }
+    &-item{
+      width: calc(33.333% - 20px);
+      background: #EAECEE;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      padding: 0 25px;
+      @include media(992){
+        width: 100%;
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
+      }
+      &_sm{
+        width: 100%;
+        background: #EAECEE;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 25px;
+        position: relative;
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &-p{
+      font-family: 'Avenir Next Cyr';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #080C53;
+      text-align: left;
+      &_small{
+        font-family: 'Avenir Next Cyr';
+        font-style: normal;
+        font-weight: 450;
+        font-size: 10px;
+        line-height: 12px;
+        color: #080C53;
+      }
+      &_orange{
+        font-family: 'Avenir Next Cyr';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #F17634;
+      }
+      &_blue{
+        font-family: 'Avenir Next Cyr';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #080C53;
+      }
+      &_changable{
+        position: relative;
+        &::before{
+          content: attr(data-value);
+          position: absolute;
+          top: 0;
+          right: -100%;
+          font-family: 'Avenir Next Cyr';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 10px;
+          line-height: 12px;
+          color: #080C53;
+          min-width: 28px;
+          height: 12px;
+          @include media(470){
+            top: -10px;
+            right: -50%;
+          }
+        }
+      }
+    }
+    &-col{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    &-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-p{
+        width: calc(33.333% - 20px);
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: 'Avenir Next Cyr';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #080C53;
+        @include media($sm){
+          width: calc(33.333% - 8px);
+        }
+      }
     }
   }
 }

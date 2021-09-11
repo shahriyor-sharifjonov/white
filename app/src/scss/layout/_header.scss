@@ -136,6 +136,9 @@
   &__lang{
     margin-right: 60px;
     position: relative;
+    @include media($sm){
+      margin-right: 45px;
+    }
     &::after{
       content: '';
       position: absolute;
