@@ -76,6 +76,32 @@ function checkMenu2(){
 
 headerButton.onclick = menuToggle;
 
+// Header Menu
+if(document.querySelector(".header__right-menu-button2")){
+  const headerButton3: HTMLButtonElement = document.querySelector(".header__right-menu-button2");
+  const headerMenu3: HTMLUListElement = document.querySelector(".header__right-menu-content");
+  let menuOpened3 = false;
+  const menuToggle3 = () => {
+    menuOpened3 = !menuOpened3;
+    checkMenu3();
+    checkMenu2()
+    headerButton3.classList.toggle("open");
+    headerMenu3.classList.toggle("open");
+  };
+  
+  function checkMenu3(){
+    if(menuOpened3){
+      disableScroll()
+    }else{
+      enableScroll()
+    }
+  }
+  
+  
+  headerButton3.onclick = menuToggle3;
+}
+
+
 window.onclick = (e) => {
   if (menuOpened && !e.composedPath().includes(headerButton) && !e.composedPath().includes(headerMenu)){
     menuToggle();
@@ -161,4 +187,8 @@ if(document.getElementsByClassName('sports__top-item')){
       e.target.classList.add('active');
     }
   }) 
+}
+
+function headerDropOpen(el){
+  el.classList.toggle('active');
 }

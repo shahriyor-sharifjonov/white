@@ -27,3 +27,46 @@ mixin header()
           a(href="auth.html").header__register Авторизация
         .header__right-menu-button 
           .header__right-menu-button-dot 
+
+mixin header2()
+  .header 
+    .header__nav.container
+      .header__main-button
+        .header__main-button-line
+      .header__left
+        a(href="index.html").header__logo LOGO
+        ul.header__list 
+          li.header__li 
+            a(href="index.html").header__link Главная 
+          li.header__li 
+            a(href="index.html").header__link Виды спорта 
+          li.header__li 
+            a(href="index.html").header__link Статистика
+          li.header__li 
+            a(href="index.html").header__link Результаты
+          li.header__li 
+            a(href="index.html").header__link О нас
+      .header__right
+        .header__lang 
+          button(onclick="addActiveDrop(this)").header__lang-btn Ru <img src="images/polygon.svg">
+          .header__lang-list 
+            button.header__lang-item Eng
+            button.header__lang-item Ua
+            button.header__lang-item Fr
+        .header__right-menu
+          a(href="auth.html").header__register Иван - 100 грн
+          .header__right-menu-button2 
+            .header__right-menu-button2-line 
+          .header__right-menu-content
+            a(href="#!").header__right-menu-link Личная информация 
+            .header__drop
+              button.header__drop-btn(onclick="headerDropOpen(this)") Ставки <img src="images/down-arrow-orange.svg">
+              .header__drop-content 
+                a(href="#!").header__drop-link Текущие 
+                a(href="#!").header__drop-link Рассчитанные
+            a(href="#!").header__right-menu-link Пополнить баланс
+            a(href="#!").header__right-menu-link История пополнения средств
+            a(href="#!").header__right-menu-link История вывода средств
+            a(href="#!").header__right-menu-link Выйти из профиля
+        .header__right-menu-button 
+          .header__right-menu-button-dot 

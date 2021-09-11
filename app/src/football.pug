@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper 
+      include components/header.pug 
+      +header2
+      main.main 
+        .football
+          .football__body.container
+            .category.football__category <a href="index.html">Главная</a> <img src="images/category.svg"> Футбол
+            h2.title Футбол
+            .football__content 
+              p.sports__title.football__title Украина. Премьер-лига
+              .sports__row.football__row 
+                .sports__col.football__col.sports__name
+                  p.sports__desc Черноморец Одесса
+                  p.sports__desc Шахтер Донецк
+                .sports__col.football__col
+                  .sports__item.football__item   
+                    p.sports__item-title Черноморец Одесса
+                    p.sports__item-p 9.60
+                .sports__col.football__col
+                  .sports__item.football__item   
+                    p.sports__item-title Ничья
+                    p.sports__item-p 5.10
+                .sports__col.football__col
+                  .sports__item.football__item   
+                    p.sports__item-title Шахтер Донецк
+                    p.sports__item-p 1.33
+                .sports__col.football__col
+                  .sports__item.football__item
+                    button.sports__item-fav
+                      img(src="images/star.svg", alt="star").sports__item-img
+              form(action="football-progress.html").football__form 
+                .football__form-title Чтобы получить наилучший коэфициент, умножте сумму
+                input(type="text").football__form-input
+                button(type="submit").football__form-btn.btn Получить
+      include components/footer.pug 
+      +footer
+
+    script(src="scripts/index.js") 

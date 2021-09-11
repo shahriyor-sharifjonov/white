@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper 
+      include components/header.pug 
+      +header2
+      main.main 
+        .football
+          .football__body.container
+            .category.football__category <a href="index.html">Главная</a> <img src="images/category.svg"> Футбол
+            h2.title Идет обработка вашей ставки
+            .football__content 
+              p.football__time 03:54
+              .progress-bar 
+                .progress-bar-track(style="width: 86%") 
+              a(href="#!") (type="button").btn.football__btn Кнопка
+
+      include components/footer.pug 
+      +footer
+
+    script(src="scripts/index.js") 
