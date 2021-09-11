@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper 
+      include components/header.pug 
+      +header
+      main.main 
+        .auth   
+          h2.auth__title Авторизация
+          form(action="football.html").auth__form
+            .auth__row
+              label(for="check").auth__label Ввести код из СМС
+              button(type="button").auth__restart-btn Отправить код повторно
+            input(type="tel" placeholder="XX - XXX - XX - XX - ХХХХ" id="check").auth__input
+            button(type="submit").auth__btn.btn Ввести код из СМС
+      include components/footer.pug 
+      +footer
+
+    script(src="scripts/index.js") 

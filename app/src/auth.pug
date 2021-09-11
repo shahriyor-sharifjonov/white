@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="styles/intlTelInput.css")
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper 
+      include components/header.pug 
+      +header
+      main.main 
+        .auth   
+          h2.auth__title Авторизация
+          form(action="auth-check.html").auth__form
+            label(for="telephone").auth__label Номер телефона
+            input(type="tel" placeholder="+380(XX) XXX - XX - XX" id="telephone").auth__input
+            button(type="submit").auth__btn.btn Отправить код по СМС
+      include components/footer.pug 
+      +footer
+
+    script(src="scripts/intlTelInput.min.js")
+    script(src="scripts/jquery.js") 
+    script(src="scripts/intlTelInput-jquery.min.js")
+    script(src="scripts/auth.js") 
+    script(src="scripts/index.js")  
