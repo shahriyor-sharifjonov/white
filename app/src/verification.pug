@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper 
+      include components/header.pug 
+      +header2
+      main.main 
+        .football
+          .football__body.container
+            .category.football__category <a href="profile.html">Личный кабинет</a> <img src="images/category.svg"> Верификация аккаунта
+            h2.title Верификация аккаунта
+            .verification
+              .verification__body
+                p.verification__title Выберите документ для верификации
+                .verification__top
+                  .verification__col
+                    button(type="button").verification__top-btn.active <img src="images/passport.webp" class="verification__top-btn-img"> Паспорт <img src="images/down-arrow-orange.svg" class="verification__top-btn-arrow">
+                    form(action="").verification__content 
+                      .verification__item
+                        p.verification__item-p Шаг 1. Загрузи фото первого разворота паспорта/ID карты
+                        input(type="file", name="").verification__item-input
+                        .verification__item-input_span <img src="images/upload.svg"> Загрузить документ
+                      .verification__item
+                        p.verification__item-p Шаг 2. Загрузи фото страницы паспорта с актуальным фото/обратную сторону ID карты
+                        input(type="file", name="").verification__item-input
+                        .verification__item-input_span <img src="images/upload.svg"> Загрузить документ
+                      .verification__item
+                        p.verification__item-p Шаг 3. Загрузи селфи с паспортом в руках, держа паспорт открытым на странице с актуальным фото/с ID картой в руках
+                        input(type="file", name="").verification__item-input
+                        .verification__item-input_span <img src="images/upload.svg"> Загрузить документ
+                      .verification__item   
+                        button(type="submit") 
+                  .verification__col
+                    button(type="button").verification__top-btn <img src="images/document.webp" class="verification__top-btn-img"> Водительское удостоверение <img src="images/down-arrow-orange.svg" class="verification__top-btn-arrow">
+                    .verification__content 
+
+      include components/footer.pug 
+      +footer
+
+    script(src="scripts/index.js") 

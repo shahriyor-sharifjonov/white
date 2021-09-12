@@ -242,6 +242,10 @@
       max-width: 280px;
       width: 100%;
     }
+    & .light{
+      margin-right: 3px;
+      font-weight: 300;
+    }
   }
   &__right-menu{
     display: flex;

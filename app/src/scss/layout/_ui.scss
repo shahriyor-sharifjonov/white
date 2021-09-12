@@ -111,3 +111,9 @@ ul{
 .mt-95{
   margin-top: 95px;
 }
+
+
+input[type=file],
+input[type=file]::-webkit-file-upload-button {
+    cursor: pointer; 
+}
