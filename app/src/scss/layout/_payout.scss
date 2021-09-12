@@ -1,0 +1,47 @@
+.payout{
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__p{
+    .orange{
+      color: #F17634;
+      font-weight: 700;
+    }
+    b{
+      color: #303030;
+    }
+  }
+  &__item{
+    max-width: 155px;
+  }
+  &__dropdown{
+    max-width: 155px;
+    width: 100%;
+    &-btn{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'Avenir Next Cyr';
+      img{
+        &:first-child{
+          margin-right: 10px;
+        }
+        &:last-child{
+          margin-left: auto;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &__btn{
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+    width: 155px;
+    height: 30px;
+    margin-bottom: 50px;
+  }
+  
+}

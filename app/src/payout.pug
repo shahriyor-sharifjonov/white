@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper 
+      include components/header.pug 
+      +header2
+      main.main 
+        .football
+          .football__body.container
+            h2.title.mt-95 Пополнить баланс
+            form(action="payout-confirm.html").payout__content
+              .profile__data-item.payout__item
+                label(for="name").profile__data-label Способ пополнения
+                .profile__data-row
+                  .payout__dropdown
+                    button.profile__data-input.payout__dropdown-btn <img src="images/sberbank.webp"> Privat 24 <img src="images/down-arrow-orange.svg">
+              .profile__data-item.payout__item
+                label(for="sum").profile__data-label Сумма пополнения
+                .profile__data-row
+                  input(type="text" id="sum").profile__data-input
+              .profile__data-btns
+                button(type="submit").payout__btn.btn Пополнить
+      include components/footer.pug 
+      +footer
+
+    script(src="scripts/index.js") 

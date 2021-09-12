@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper 
+      include components/header.pug 
+      +header2
+      main.main 
+        .football
+          .football__body.container
+            h2.title.mt-95 Текущие ставки
+            .football__content 
+              p.sports__title.football__title Украина. Премьер-лига
+              .sports__row.rates__row 
+                .rates__item
+                  p.rates__item-data <span>#13354</span> / 12 июля 2021 0:32
+                  .rates__item-content 
+                    p.rates__item-title Черноморец Одесса <span>1.92</span>
+                    p.rates__item-p Победитель матча (основное время)
+                    p.rates__item-p <img src="images/ball.svg">21 августа 2021 19:30, Черноморец Одесса - Шахтер Донецк
+                    p.rates__item-p Сумма ставки: 20.00 UAH
+                    p.rates__item-p.green Возможная выплата: 19.20 UAH
+                    button(type="button").rates__item-btn.btn Cashout
+                .rates__item
+                  p.rates__item-data <span>#13354</span> / 12 июля 2021 0:32
+                  .rates__item-content 
+                    p.rates__item-title Черноморец Одесса <span>1.92</span>
+                    p.rates__item-p Победитель матча (основное время)
+                    p.rates__item-p <img src="images/ball.svg">21 августа 2021 19:30, Черноморец Одесса - Шахтер Донецк
+                    p.rates__item-p Сумма ставки: 20.00 UAH
+                    p.rates__item-p.green Возможная выплата: 19.20 UAH
+                    button(type="button").rates__item-btn.btn Cashout
+                  
+      include components/footer.pug 
+      +footer
+
+    script(src="scripts/index.js") 

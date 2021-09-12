@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .wrapper 
+      include components/header.pug 
+      +header2
+      main.main 
+        .football
+          .football__body.container
+            h2.title.mt-95 Пополнение счета #1234865
+            .payout__content
+              p.payout__p Для пополнения счета переведите <b>999</b> грн на счёт <span class="orange">4441114442223</span> с комментарием <b>#1234#</b>
+              .profile__data-btns
+                button(onclick="popupOpen()").payout__btn.btn Я оплатил
+        .popup
+          .popup__body
+            p.popup-title Вы оплатили?
+            .popup__btns
+              button.btn.popup__btn Да
+              button.popup__btn Нет
+          .popup__close
+      include components/footer.pug 
+      +footer
+
+    script(src="scripts/index.js") 

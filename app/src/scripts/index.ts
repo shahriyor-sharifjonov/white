@@ -253,3 +253,17 @@ window.addEventListener('click' function(e){
     e.target.classList.add('active')
   }
 })
+
+
+let popup = document.querySelector('.popup')
+function popupOpen(){
+  popup.classList.add('open')
+}
+window.addEventListener('click', function(e){
+  if(e.target.classList.contains('popup__btn')){
+    popup.classList.remove('open')
+  }
+  if(e.target.classList.contains('popup__close')){
+    popup.classList.remove('open')
+  }
+})
