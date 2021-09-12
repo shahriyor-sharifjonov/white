@@ -212,6 +212,7 @@ function changeProfileData(el){
         el.childNodes[1].innerHTML = "<img src='images/edit.svg'>"
       }
     }
+    
   })
   function checkProfileInputs(){
     console.log('check');
@@ -241,3 +242,14 @@ function changeProfileData(el){
   }
 }
 
+
+let verificationBtn = document.getElementsByClassName('verification__top-btn')
+
+window.addEventListener('click' function(e){
+  if(e.target.classList.contains('verification__top-btn')){
+    for(let i = 0; i < verificationBtn.length; i++){
+      verificationBtn[i].classList.remove('active')
+    }
+    e.target.classList.add('active')
+  }
+})

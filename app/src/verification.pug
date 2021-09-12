@@ -35,10 +35,22 @@ html(lang="en")
                         input(type="file", name="").verification__item-input
                         .verification__item-input_span <img src="images/upload.svg"> Загрузить документ
                       .verification__item   
-                        button(type="submit") 
+                        button(type="submit").verification__item-btn.btn Верифицировать аккаунт
                   .verification__col
                     button(type="button").verification__top-btn <img src="images/document.webp" class="verification__top-btn-img"> Водительское удостоверение <img src="images/down-arrow-orange.svg" class="verification__top-btn-arrow">
-                    .verification__content 
+                    form(action="").verification__content.ml-minus 
+                      .verification__item
+                        p.verification__item-p Шаг 1. Загрузи фото первого разворота паспорта/ID карты
+                        input(type="file", name="").verification__item-input
+                        .verification__item-input_span <img src="images/upload.svg"> Загрузить документ
+                      .verification__item
+                        p.verification__item-p Шаг 2. Загрузи фото страницы паспорта с актуальным фото/обратную сторону ID карты
+                        input(type="file", name="").verification__item-input
+                        .verification__item-input_span <img src="images/upload.svg"> Загрузить документ
+                      .verification__item.not-132  
+                        
+                      .verification__item.not-132  
+                        button(type="submit").verification__item-btn.btn Верифицировать аккаунт 
 
       include components/footer.pug 
       +footer
