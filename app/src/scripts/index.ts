@@ -192,3 +192,52 @@ if(document.getElementsByClassName('sports__top-item')){
 function headerDropOpen(el){
   el.classList.toggle('active');
 }
+
+
+function changeProfileData(el){
+  let dataRows = document.getElementsByClassName('profile__data-row')
+  let saveBtn = document.querySelector('.profile__data-save')
+  let cancelBtn = document.querySelector('.profile__data-cancel')
+  window.addEventListener('click', function(e){
+    if(e.target == saveBtn){
+      saveBtn.classList.remove('active');
+      for(let i = 0; i < el.childNodes.length; i++){
+        el.childNodes[0].disabled = true
+        el.childNodes[1].innerHTML = "<img src='images/edit.svg'>"
+      }
+    }else if(e.target == cancelBtn){
+      saveBtn.classList.remove('active');
+      for(let i = 0; i < el.childNodes.length; i++){
+        el.childNodes[0].disabled = true
+        el.childNodes[1].innerHTML = "<img src='images/edit.svg'>"
+      }
+    }
+  })
+  function checkProfileInputs(){
+    console.log('check');
+    
+    for(let i = 0; i < dataRows.length; i++){
+      if(dataRows[i].classList.contains('active')){
+        console.log('bor');
+        
+        saveBtn.classList.add('active')
+      }
+    }
+  }
+  el.classList.toggle('active')
+  if(el.classList.contains('active')){
+    for(let i = 0; i < el.childNodes.length; i++){
+      el.childNodes[0].disabled = false
+      el.childNodes[1].innerHTML = "<img src='images/correct.svg'>"
+      checkProfileInputs()
+    }
+  }
+  else{
+    for(let i = 0; i < el.childNodes.length; i++){
+      el.childNodes[0].disabled = true
+      el.childNodes[1].innerHTML = "<img src='images/edit.svg'>"
+      checkProfileInputs()
+    }
+  }
+}
+

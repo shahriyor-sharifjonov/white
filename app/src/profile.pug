@@ -14,6 +14,30 @@ html(lang="en")
         .football
           .football__body.container
             h2.title.mt-95 Личная информация
+            .profile__data 
+              .profile__data-item
+                label(for="name").profile__data-label Имя
+                .profile__data-row
+                  input(type="text" disabled value="Владислав" id="name").profile__data-input
+                  label(for="name" onclick="changeProfileData(this.parentNode)").profile__data-button <img src="images/edit.svg">
+              .profile__data-item
+                label(for="surname").profile__data-label Фамилия
+                .profile__data-row
+                  input(type="text" disabled value="Азаров" id="surname").profile__data-input
+                  label(for="surname" onclick="changeProfileData(this.parentNode)").profile__data-button <img src="images/edit.svg">
+              .profile__data-item
+                label(for="tel").profile__data-label Телефон
+                .profile__data-row
+                  input(type="text" disabled value="+380 (88) 888 - 88 - 88" id="tel").profile__data-input
+              .profile__data-item
+                label(for="pass").profile__data-label Пароль
+                .profile__data-row
+                  input(type="password" disabled value="12345678" id="pass").profile__data-input
+                  label(for="pass" onclick="changeProfileData(this.parentNode)").profile__data-button <img src="images/edit.svg">
+              .profile__data-btns
+                .profile__data-save.btn Сохранить
+                button.profile__data-cancel.profile__data-btn Отменить
+                a(href="verification.html").profile__data-btn Верификация аккаунта 
       include components/footer.pug 
       +footer
 
