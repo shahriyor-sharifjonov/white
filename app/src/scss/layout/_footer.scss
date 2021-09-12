@@ -80,6 +80,9 @@
       order: 1;
       margin-top: 50px;
     }
+    @include media(576){
+      margin-right: 0;
+    }
     &::after{
       content: '';
       width: 0;
