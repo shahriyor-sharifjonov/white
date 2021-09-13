@@ -19,7 +19,10 @@ html(lang="en")
                 label(for="name").profile__data-label Способ пополнения
                 .profile__data-row
                   .payout__dropdown
-                    button.profile__data-input.payout__dropdown-btn <img src="images/sberbank.webp"> Privat 24 <img src="images/down-arrow-orange.svg">
+                    button(type="button" onclick="payoutDrop(this)").profile__data-input.payout__dropdown-btn <img src="images/sberbank.webp"> Privat 24 <img src="images/down-arrow-orange.svg">
+                    .payout__dropdown-content
+                      button(type="button" onclick="payoutDropClose()").payout__dropdown-item <img src="images/sberbank.webp"> Privat 24 
+                      button(type="button" onclick="payoutDropClose()").payout__dropdown-item <img src="images/qiwi.png"> Qiwi
               .profile__data-item.payout__item
                 label(for="sum").profile__data-label Сумма пополнения
                 .profile__data-row

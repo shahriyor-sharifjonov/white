@@ -267,3 +267,12 @@ window.addEventListener('click', function(e){
     popup.classList.remove('open')
   }
 })
+
+
+function payoutDrop(el){
+  el.classList.toggle('active')
+}
+
+function payoutDropClose(){
+  document.querySelector('.payout__dropdown-btn').classList.remove('active')
+}

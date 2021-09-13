@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-margin: 100px;
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
   &:focus,
   &:active{
     outline: none;
